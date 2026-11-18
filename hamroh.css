@@ -1,0 +1,42 @@
+/* Tejam × Hamroh hackathon module. Scoped styles; original Tejam CSS unchanged. */
+.hamroh-module{display:grid;grid-template-columns:minmax(0,1fr) 210px;align-items:center;gap:26px;padding:26px 32px;margin:0 0 22px;background:linear-gradient(118deg,#12213b,#233957 60%,#14253c);color:#f3f7ff;border:1px solid #36516e;border-radius:22px;overflow:hidden;box-shadow:0 16px 50px #0d233333}
+.hamroh-module .eyebrow{color:#88e5c3;margin:0 0 9px}
+.hamroh-left h2{font-size:22px;letter-spacing:-.6px;line-height:1.25;font-weight:800;max-width:510px}
+.hamroh-left p{color:#b8c9dc;font-size:13px;max-width:550px;line-height:1.7;margin:12px 0 20px}
+.hamroh-actions{display:flex;flex-wrap:wrap;gap:9px}
+.hamroh-module .btn{padding:10px 14px;border-color:#536780;background:#2d4562;color:#eff7ff}
+.hamroh-module .btn.primary{background:#76ddbe;color:#102e35;border-color:#76ddbe}
+.hamroh-status{display:block;color:#9ab5c9;margin-top:13px;font-size:10px}
+.hamroh-mock{text-align:center}
+.hamroh-screen{width:135px;height:215px;border:4px solid #0a111f;box-shadow:0 0 0 2px #638097,0 14px 28px #0008,inset 0 0 22px #073048;margin:auto;border-radius:25px;background:radial-gradient(circle at center 32%,#163044 0%,#060f21 75%);display:flex;align-items:center;flex-direction:column;justify-content:flex-start;gap:7px;padding:16px 9px;color:#d4ffeb}
+.hamroh-screen>small:first-child{letter-spacing:1.1px;color:#88d6bb;font-size:6px}
+.hamroh-screen>span{font-size:8px;letter-spacing:1.1px;font-weight:700;color:#a9bfcf}
+.hamroh-screen>strong{font-size:13px;line-height:1.1;max-width:100%;overflow-wrap:anywhere}
+.hamroh-screen>small:last-child{color:#87aabb;font-size:8px;line-height:1.35}
+.hamroh-mock-caption{font-size:9px;line-height:1.5;color:#8dacc6;margin:12px 0 0}
+.hamroh-face{width:74px;height:68px;position:relative;margin:8px auto 4px;animation:hamroh-pop .6s cubic-bezier(.34,1.6,.5,1)}
+.hamroh-eye{position:absolute;top:16px;width:13px;height:20px;background:#89f5ce;border-radius:14px;box-shadow:0 0 12px #33efad78;animation:hamroh-blink 4s ease-in-out infinite;transform-origin:center}
+.hamroh-eye:nth-child(1){left:18px}.hamroh-eye:nth-child(2){right:18px}
+.hamroh-mouth{position:absolute;left:30px;bottom:7px;width:18px;height:12px;border:3px solid #89f5ce;border-top:0;border-radius:0 0 20px 20px;transform:translateX(-2px)}
+.hamroh-face.expense .hamroh-eye{background:#ffcc9a;box-shadow:0 0 12px #f7b27066}
+.hamroh-face.expense .hamroh-mouth{border-color:#ffcc9a;transform:rotate(180deg) translateX(2px)}
+.hamroh-face.income .hamroh-mouth{width:29px;height:17px;left:24px;bottom:5px}
+.hamroh-face.daily .hamroh-mouth{width:18px;height:0;border-radius:10px;border-top:3px solid #89f5ce;border-bottom:0}
+@keyframes hamroh-pop{0%{transform:scale(.7) translateY(15px);opacity:.4}100%{transform:scale(1) translateY(0);opacity:1}}
+@keyframes hamroh-blink{0%,43%,48%,100%{transform:scaleY(1)}45%,46%{transform:scaleY(.09)}}
+.hamroh-dialog{border:1px solid #49647e;border-radius:20px;padding:0;width:min(470px,calc(100vw - 24px));max-height:85vh;overflow:hidden;background:#101f32;color:#e8f6f5;box-shadow:0 28px 120px #000a}
+.hamroh-dialog::backdrop{background:#071724bd;backdrop-filter:blur(6px)}
+.hamroh-dialog-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid #2a3d51;background:linear-gradient(90deg,#203c56,#14283c)}
+.hamroh-dialog-head b{font-size:17px}.hamroh-dialog-head small{font-size:10px;display:block;color:#92b7bf;margin-top:4px}
+.hamroh-dialog-head button{font-size:27px;color:#bcd2de;border:0;background:none;cursor:pointer}
+.hamroh-messages{height:300px;max-height:calc(85vh - 195px);overflow:auto;display:flex;gap:12px;flex-direction:column;padding:20px;scrollbar-color:#507d80 transparent}
+.hamroh-bubble{white-space:pre-wrap;max-width:89%;font-size:12px;line-height:1.65;border-radius:14px;padding:11px 14px;align-self:flex-start;background:#263c55;color:#ebf7f9}
+.hamroh-bubble.user{align-self:flex-end;background:#75d9b8;color:#102d31}
+.hamroh-chat-form{display:flex;gap:8px;padding:12px 16px 8px;background:#152a40}
+.hamroh-chat-form input{background:#233b50;color:#fff;border:1px solid #526f80;flex:1;min-width:50px}
+.hamroh-chat-form input::placeholder{color:#91aabb}
+.hamroh-chat-form .btn{background:#76ddbe;color:#102e35;border:0}
+.hamroh-chat-note{display:block;padding:0 17px 13px;background:#152a40;font-size:9px;color:#9dafba}
+@media(max-width:840px){.hamroh-module{grid-template-columns:minmax(0,1fr) 155px;gap:10px;padding:20px}.hamroh-left h2{font-size:18px}}
+@media(max-width:540px){.hamroh-module{grid-template-columns:1fr;text-align:center;padding:21px}.hamroh-left h2,.hamroh-left p{margin-left:auto;margin-right:auto}.hamroh-actions{justify-content:center}.hamroh-mock{margin-top:8px}.hamroh-mock-caption{margin-top:7px}}
+@media(prefers-reduced-motion:reduce){.hamroh-face,.hamroh-eye{animation:none}}
